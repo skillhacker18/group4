@@ -1,4 +1,4 @@
-# Website by Kaydeen Tucker
+# Website by Group 4
 
 This is a custom website for Kaydeen built with React
 
