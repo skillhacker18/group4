@@ -1,6 +1,6 @@
 # Website by Group 4
 
-This is a custom website for Kaydeen built with React
+This is a custom website for Group 4 built with React
 
 ## Running the app
 
