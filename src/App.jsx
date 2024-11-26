@@ -6,7 +6,7 @@ import { Signup } from './pages/auth/Signup';
 import { Layout } from './pages/Layout';
 import { NotFound } from './pages/NotFound';
 import { Home } from './pages/Home';
-
+import {Services} from './pages/Services';
 
 function AppRoutes() {
   return (
