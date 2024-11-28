@@ -62,14 +62,14 @@ const servicesData = [
     id: 9,
     name: 'Thumbdrive',
     description: 'Custom printed thumb drives for promotions.',
-    price: 150,
+    price: 100,
     image: '/images/thumbdrive.jpeg',
   },
   {
     id: 10,
     name: 'Phone Stand',
     description: 'Custom phone stand for business gifts or events.',
-    price: 250,
+    price: 100,
     image: '/images/phonestand.jpeg',
   },
 ];
