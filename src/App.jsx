@@ -5,8 +5,8 @@ import { Signin } from './pages/auth/Signin';
 import { Signup } from './pages/auth/Signup';
 import { Layout } from './pages/Layout';
 import { NotFound } from './pages/NotFound';
-import { Home } from './pages/Home';
-import {Services} from './pages/Services';
+import { Home } from './pages/Home'
+
 
 function AppRoutes() {
   return (
