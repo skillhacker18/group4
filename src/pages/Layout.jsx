@@ -21,12 +21,15 @@ export function Layout() {
 					<Link to="/auth/signup" className="button">Sign up</Link>
 				</div>
 			</header>
+			<main>
+				<Outlet />
+			</main>
 
 			<div className="footer">
 				<div className="container">
 					<div className="row">
 						<div className="footer-col-1">
-							<h3>Download Our Aoo</h3>
+							<h3>Download Our App</h3>
 							<p>Download for Android and IOS mobile phone.</p>
 							<div className="app-logo">
 							<img src="https://i.ibb.co/KbPTYYQ/play-store.png" alt="" />
@@ -34,24 +37,24 @@ export function Layout() {
 							</div>
 						</div>
 						<div className="footer-col-2">
-						<img src="https://i.ibb.co/j3FNGj7/logo-white.png" alt="" />
-							<p>Our Purpose Is to Make Design Accessible to Many</p>
-						</div>
-						<div className="footer-col-3">
 							<h3>Useful Links</h3>
 							<ul>
 								<li>Blogs</li>
 								<li>Return Policy</li>
-								<li>Join Affiliate</li>
 							</ul>
 						</div>
+						<br></br>
+						<div className="footer-col-3">
+						<img src="https://i.ibb.co/j3FNGj7/logo-white.png" alt="" />
+							<p>Our Purpose Is to Make Design Accessible to Many</p>
+						</div>
+						
 						<div className="footer-col-4"></div>
 						<h3>Follow us</h3>
 						<ul>
 							<li>Facebook</li>
 							<li>Twitter</li>
-							<li>Instagram</li>
-							<li>Tumblr</li>
+							<li><a href="https://www.instagram.com/vivid__printing?igsh=cDEycWw2c2Vwc2Nr" target="_blank" rel="noopener noreferrer">Instagram</a></li>
 						</ul>
 					</div>
 				</div>
@@ -59,9 +62,6 @@ export function Layout() {
 				<p className="copyright">Copyright &copy; 2024 - Vivid Printing</p>
 			</div>
 
-			<main>
-				<Outlet />
-			</main>
 		</>
 	)
 }
