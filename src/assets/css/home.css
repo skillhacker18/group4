@@ -4,20 +4,22 @@
     box-sizing: border-box;
   }
   
+
   body {
     font-family: "Poppins", sans-serif;
+    
   }
   
   .column {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: flex-start;
     margin-top: 20px;
+    gap:30px;
   }
   
   .bol-2 {
-    flex-basis: 50%;
+    flex-basis: 50% ;
     min-width: 300px;
     padding: 10px;
   }
@@ -25,6 +27,8 @@
   .bol-2 img {
     max-width: 100%;
     padding: 50px 0;
+    height: auto;
+    display: block;
   }
   
   .bol-2 h1 {
