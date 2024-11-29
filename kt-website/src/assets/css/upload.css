@@ -1,60 +1,48 @@
-body {
-  background: linear-gradient(180deg, rgba(255, 0, 0, 0.8), rgba(0, 0, 139, 0.8));
-  color: white;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  margin: 0;
-  padding: 0;
-}
+/* upload.css */
 
-.logo {
-  margin-top: 20px;
-}
-
-.upload-section {
-  margin-top: 50px;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 30px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-}
-
-input[type="file"] {
-  background-color: #ffffff;
-  color: #001f4d;
-  border: none;
-  border-radius: 5px;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-}
-
-input[type="file"]:hover {
-  background-color: #d9d9d9;
-}
-
-.upload-section h2 {
-  margin-bottom: 20px;
-  background-color: rgba(0, 0, 0, 0.5); /* Added background color */
-  padding: 10px;
-  border-radius: 5px;
-}
-
-.upload-button {
-  padding: 10px 20px;
-  font-size: 16px;
-  background-color: #ff6600;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.slogan {
-  position: absolute;
-  bottom: 20px;
-  text-align: center;
-  font-size: 18px;
-  font-style: italic;
-  font-weight: bold;
-}
+.upload-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.3); /* Semi-transparent black background */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    margin: 50px auto;
+  }
+  
+  .h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white; /* White text color */
+  }
+  
+  .input-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #ffffff; /* White background for input fields */
+    color: #001f4d; /* Dark blue text color */
+  }
+  
+  .button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .button-primary {
+    background-color: #ffcc99; /* Pale orange button */
+    color: white;
+  }
+  
+  .button-primary:hover {
+    background-color: #ffb366; /* Slightly darker pale orange on hover */
+  }
+  

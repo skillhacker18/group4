@@ -8,6 +8,7 @@
 	& .company-name {
 		font-weight: bold;
 		text-transform: uppercase;
+		white-space: nowrap;
 
 		&::after {
 			content: " .";
@@ -21,6 +22,7 @@
 		& a {
 			color: inherit;
 			text-decoration-line: none;
+			white-space: nowrap;
 
 			&.active {
 				text-decoration-color: var(--color);
@@ -34,6 +36,10 @@
 	& .auth-navigation {
 		display: flex;
 		gap: 1rem;
+
+		& a {
+			white-space: nowrap;
+		}
 	}
 }
 

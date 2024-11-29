@@ -1,78 +1,63 @@
-import React, { useState } from 'react';
-import '../assets/css/Contact.css'; // Updated path to the CSS file
+import "../assets/css/contact.css";
+
+import { BiLockAlt, BiEnvelope, BiUser } from "react-icons/bi"
+
 
 export function Contact() {
-  const [message, setMessage] = useState('');
-  const [charCount, setCharCount] = useState(0);
+	return (
+		<div className="contactpage">
+			<h1 className="h1">Contact us</h1>
+			<form className="form">
+				<div>
+					<label htmlFor="name">Full name</label>
+					<div className="input-group">
+						<BiUser className="icon" />
+						<input type="text" id="name" name="name" className="input-field" />
+					</div>
+				</div>
 
-  const handleMessageChange = (e) => {
-    setMessage(e.target.value);
-    setCharCount(e.target.value.length);
-  };
 
-  return (
-    <div className="contactpage">
-      <h1 className="contact-header">Contact Us</h1>
-      <form className="contact-form">
-        <div className="form-group">
-          <label htmlFor="name">Your Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="email">Your Email Address:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            placeholder="Enter your email"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="phone">Your Phone Number:</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Enter your phone number"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="subject">Subject:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-            placeholder="Enter the subject"
-            required
-          />
-        </div>
-        <div className="form-group">
-          <label htmlFor="message">Your Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Enter your message"
-            required
-            value={message}
-            onChange={handleMessageChange}
-          />
-          <p className="char-count">{charCount}/500 characters</p>
-        </div>
-        <button type="submit" className="submit-button">Submit</button>
-      </form>
+				<div>
+					<label htmlFor="email">Email address</label>
+					<div className="input-group">
+						<BiUser className="icon" />
+						<input type="email" id="email" name="email" className="input-field" required />
+					</div>
+				</div>
 
-      <footer className="contact-footer">
-        <p>Email: ricardoanderson696@gmail.com</p>
-        <p>Phone: +1 876-447-8442</p>
-      </footer>
-    </div>
-  );
+
+
+				<div>
+					<label htmlFor="phone">Phone number</label>
+					<div className="input-group">
+						<BiUser className="icon" />
+						<input type="tel" id="phone" name="phone" className="input-field" />
+					</div>
+				</div>
+
+
+
+				<div>
+					<label htmlFor="subject">Subject</label>
+					<div className="input-group">
+						<BiUser className="icon" />
+						<input type="text" id="subject" name="subject" className="input-field" required />
+					</div>
+				</div>
+
+
+				<div>
+					<label htmlFor="message">Message</label>
+					<div className="input-group">
+						<BiUser className="icon" />
+						<textarea id="message" name="message" rows="10" className="input-field" required/>
+					</div>
+				</div>
+
+				<div>
+                <button type="submit" className="button button-primary">Send message</button>
+            </div>
+			</form>
+		</div>
+	)
 }

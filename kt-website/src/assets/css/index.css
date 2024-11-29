@@ -1,4 +1,6 @@
-/* Define styles to be used for the entire site */
+/* Global CSS: Rules here apply for entire website */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
 
 :root {
   --color: white;
@@ -11,12 +13,13 @@ html {
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: system-ui;
+  font-family: "Poppins", system-ui;
   line-height: 1.5;
-  background-image: url("/src/assets/2.jpg");
+  background-image: linear-gradient(to bottom, rgb(255, 0, 0, 0.8), rgba(0, 0, 139, 0.8));
+  /* background-image: url("/src/assets/2.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; */
   color: var(--color);
 }
 

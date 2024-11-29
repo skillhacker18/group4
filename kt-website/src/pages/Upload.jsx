@@ -1,63 +1,24 @@
-// src/components/Upload.js
 import "../assets/css/upload.css";
-import React, { useState } from 'react';
-
-
 
 export function Upload() {
-    const [file, setFile] = useState(null);
+	return (
+		<div className="upload-page">
+			<h1 className="h1">Upload your design image</h1>
+			<input type="file" id="image" name="image" className="input-field" />
 
-    const handleFileChange = (e) => {
-        const selectedFile = e.target.files[0];
-        if (selectedFile) {
-            setFile(selectedFile);
-        }
-    };
+			<label htmlFor="price">price</label>
+			<input type="number" id="price" name="price" className="input-field" />
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (!file) {
-            alert('Please select a file before uploading.');
-            return;
-        }
+			<label htmlFor="quantity">quantity</label>
+			<input type="number" id="quantity" name="quantity" className="input-field" />
 
-        const formData = new FormData();
-        formData.append('Design-image', file);
+			<label htmlFor="type">type</label>
+			<input type="text" id="type" name="type" className="input-field" />
 
-        fetch('/upload', {
-            method: 'POST',
-            body: formData,
-        })
-        .then(response => response.json())
-        .then(data => {
-            alert('File uploaded successfully!');
-        })
-        .catch(error => {
-            alert('Error uploading file.');
-        });
-    };
+			<label htmlFor="date">date</label>
+			<input type="datetime-local" id="date" name="date" className="input-field" />
 
-    return (
-        <div className="upload-page">
-            <div className="logo">
-                <img src="oneil logo.jpg" alt="Vivid Printing Logo" style={{ maxWidth: '200px', borderRadius: '10px' }} />
-            </div>
-            <div className="upload-section">
-                <h2>Upload Your Design Image</h2>
-                <form onSubmit={handleSubmit} encType="multipart/form-data">
-                    <input
-                        type="file"
-                        name="Design-image"
-                        accept=".jpeg, .jpg, .png"
-                        onChange={handleFileChange}
-                        required
-                    />
-                    <br /><br />
-                    <button type="submit" className="upload-button">Upload</button>
-                </form>
-            </div>
-        </div>
-    );
+			<button type="button" className="button button-primary">Upload</button>
+		</div>
+	)
 }
-
-

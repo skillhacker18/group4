@@ -55,7 +55,7 @@ export function Layout() {
 						<ul>
 							<li>Facebook</li>
 							<li>Twitter</li>
-							<li><a href="https://www.instagram.com/vivid__printing?igsh=cDEycWw2c2Vwc2Nr" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+							<li>Instagram</li>
 							<li>Tumblr</li>
 						</ul>
 					</section>

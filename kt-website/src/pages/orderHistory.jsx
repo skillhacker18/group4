@@ -1,23 +1,58 @@
-// src/components/OrderHistory.js
-
 import "../assets/css/orderhistory.css"
-import React from 'react';
-import { Link } from 'react-router';
 
-export function OrderHistory({ orders }) {
+
+import React, { useEffect, useState } from "react";
+import { useToken } from "../hooks/useToken";  // Assuming you have a custom hook for managing the token
+
+export function OrderHistory() {
+  const { token } = useToken();    // Get token from localStorage
+  const [orders, setOrders] = useState([]);
+
+  // Fetch orders data (adjust the URL to match your API endpoint)
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const response = await fetch('/api/user/orders', {
+          method: 'GET',
+          headers: {
+            'Authorization': `Bearer ${token}`,  // Include token in the request header for authorization
+          }
+        });
+        if (response.ok) {
+          const data = await response.json();
+          setOrders(data.orders);  // Assuming your backend returns orders in the `orders` property
+        } else {
+          console.error('Failed to fetch orders');
+        }
+      } catch (error) {
+        console.error('Error fetching orders:', error);
+      }
+    };
+
+    fetchOrders();
+  }, [token]); // Re-fetch when the token changes
+
   return (
     <div className="order-history">
-      <h2>Your Order History</h2>
-      <ul>
-        {orders.map((order) => (
-          <li key={order.id} className="order-item">
-            <p><strong>Order ID:</strong> {order.id}</p>
-            <p><strong>Date:</strong> {order.date}</p>
-            <p><strong>Status:</strong> {order.status}</p>
-            <Link to={`/order-tracking/${order.id}`} className="button">View Details</Link>
-          </li>
-        ))}
-      </ul>
+      <h1>Order History</h1>
+      {orders.length > 0 ? (
+        <ul>
+          {orders.map((order) => (
+            <li key={order.orderid}>
+              <p><strong>Order ID:</strong> {order.orderid}</p>
+              <p><strong>Product Type:</strong> {order.product_type}</p>
+              <p><strong>Order Date:</strong> {new Date(order.order_date).toLocaleDateString()}</p>
+              <p><strong>Status:</strong> {order.status}</p>
+              {/* Optionally, add links to view details of each order */}
+              <Link to={`/account/orderdetails/${order.orderid}`}>
+                <button className="button">View Order Details</button>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>No orders found.</p>
+      )}
     </div>
   );
 }

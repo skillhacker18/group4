@@ -1,52 +1,43 @@
-import "../assets/css/profi.orderTracking.css"
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router';
+import "../assets/css/ordertracking.css"
+import React, { useEffect, useState } from "react";
 
+export function OrderTracking() {
+    const [trackingData, setTrackingData] = useState([]);
 
-export default function OrderTracking() {
-  const { orderId } = useParams();  // Get order ID from URL
-  const [orderDetails, setOrderDetails] = useState(null);
+    useEffect(() => {
+        const fetchTracking = async () => {
+            try {
+                const response = await fetch('/api/user/ordertracking/1'); // Replace with dynamic order ID
+                if (response.ok) {
+                    const data = await response.json();
+                    setTrackingData(data.tracking);
+                } else {
+                    console.error('Failed to fetch tracking data');
+                }
+            } catch (error) {
+                console.error('Error fetching tracking data:', error);
+            }
+        };
 
-  // Dummy data for order tracking
-  const fetchOrderDetails = (orderId) => {
-    // In a real application, you would fetch this from an API
-    const orders = [
-      {
-        id: 1,
-        trackingNumber: 'TRK-123ABC',
-        status: 'Delivered',
-        shippingDate: '2024-10-01',
-        deliveryDate: '2024-10-03',
-      },
-      {
-        id: 2,
-        trackingNumber: 'TRK-987XYZ',
-        status: 'In Transit',
-        shippingDate: '2024-10-15',
-        deliveryDate: null,
-      },
-    ];
+        fetchTracking();
+    }, []);
 
-    const order = orders.find(order => order.id === parseInt(orderId));
-    setOrderDetails(order);
-  };
-
-  useEffect(() => {
-    fetchOrderDetails(orderId);
-  }, [orderId]);
-
-  if (!orderDetails) {
-    return <p>Loading...</p>;
-  }
-
-  return (
-    <div className="order-tracking">
-      <h2>Order Tracking Details</h2>
-      <p><strong>Order ID:</strong> {orderDetails.id}</p>
-      <p><strong>Tracking Number:</strong> {orderDetails.trackingNumber}</p>
-      <p><strong>Status:</strong> {orderDetails.status}</p>
-      <p><strong>Shipping Date:</strong> {orderDetails.shippingDate}</p>
-      <p><strong>Delivery Date:</strong> {orderDetails.deliveryDate || 'Pending'}</p>
-    </div>
-  );
+    return (
+        <div className="order-tracking">
+            <h1>Order Tracking</h1>
+            {trackingData.length > 0 ? (
+                <ul>
+                    {trackingData.map((tracking) => (
+                        <li key={tracking.trackingid}>
+                            <p><strong>Tracking Number:</strong> {tracking.tracking_no}</p>
+                            <p><strong>Status:</strong> {tracking.status}</p>
+                            <p><strong>Last Updated:</strong> {new Date(tracking.updatedat).toLocaleString()}</p>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p>No tracking information available.</p>
+            )}
+        </div>
+    );
 }

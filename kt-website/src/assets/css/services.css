@@ -1,0 +1,74 @@
+.services-page {
+	margin-top: 1rem;
+	padding: 2rem;
+	background-color: white;
+	color: black;
+	color-scheme: light;
+	border-radius: 1rem;
+
+	& .product-filter {
+		display: flex;
+		justify-content: space-around;
+		flex-wrap: wrap;
+		gap: 1rem;
+		margin-bottom: 2rem;
+		padding: 1.25rem;
+		background-color: #f0f0f0;
+		border-radius: 1rem;
+
+		& label::after {
+			content: ":";
+			margin-right: 0.5rem;
+		}
+
+		& .input-field {
+			padding-inline: 0.5rem;
+			border: 1px solid #ccc;
+			border-radius: 8px;
+		}
+	}
+
+	& .products {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 2rem;
+
+		& .product {
+			flex: 1 1 200px;
+			padding: 1rem;
+			text-align: center;
+			border-radius: 1rem;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			transition: transform 0.3s, box-shadow 0.3s;
+
+			&:hover {
+				transform: translateY(-5px);
+				box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+			}
+
+			& .product-description {
+				text-align: left;
+			}
+
+			& .input-field {
+				padding-inline: 0.5rem;
+				width: 4pc;
+				border: 1px solid;
+				border-radius: 8px;
+			}
+
+			& label::after {
+				content: ": ";
+			}
+		}
+	}
+
+	& .nowrap {
+		white-space: nowrap;
+	}
+
+	& .h1 {
+		margin-top: 0;
+		text-align: center;
+	}
+}

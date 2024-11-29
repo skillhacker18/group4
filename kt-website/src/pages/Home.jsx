@@ -1,6 +1,6 @@
 import "../assets/css/home.css"
 
-const HERO_IMAGE = "https://i.ibb.co/48H9YLS/PHOTO-2024-11-26-20-09-52-removebg-preview.png"
+const HERO_IMAGE = "https://i.ibb.co/QpTmdX5/image1.png"
 
 export function Home() {
 	return (

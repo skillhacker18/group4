@@ -6,12 +6,16 @@ import { Signup } from './pages/auth/Signup';
 import { Layout } from './pages/Layout';
 import { NotFound } from './pages/NotFound';
 import { Home } from './pages/Home';
-import { Upload } from './pages/Upload';
-import { Contact } from './pages/Contact';
-import { About } from './pages/About'
 import { useToken } from './hooks/useToken';
 import { TokenContext } from './contexts/TokenContext';
-
+import { Upload } from './pages/Upload';
+import { Services } from './pages/Services';
+import { About } from './pages/About';
+import { Contact } from './pages/Contact';
+import { Account } from './pages/Account';
+import { OrderDetails } from "./pages/OrderDetails";
+import { OrderHistory } from "./pages/OrderHistory";
+import { OrderTracking } from "./pages/OrderTracking";
 
 function AppRoutes() {
   return (
@@ -20,11 +24,16 @@ function AppRoutes() {
         <Route index path='/auth/signin' element={Signin()} />
         <Route path='/auth/signup' element={Signup()} />
         <Route path='/' element={Home()} />
+        <Route path='/upload' element={Upload()} />
+        <Route path='/services' element={Services()} />
+        <Route path='/about' element={About()} />
         <Route path='/contact' element={Contact()} />
-        <Route path='/upload' element= {Upload()}/>
-        <Route path='/about' element= {About()}/>
-        <Route path="/services" element={Services()} />
+        <Route path='/account' element={Account()} />
+        <Route path='/orderhistory' element={OrderHistory()} />
+				<Route path='/ordertracking' element={OrderTracking()} />
+				<Route path='/orderdetails' element={OrderDetails()} />
         <Route path='*' element={NotFound()} />
+
       </Route>
     </Routes>
   )
