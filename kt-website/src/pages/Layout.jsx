@@ -19,6 +19,7 @@ export function Layout() {
 					<NavLink to="/about">About</NavLink>
 					<NavLink to="/contact">Contact</NavLink>
 					<NavLink to="/account">Account</NavLink>
+					
 				</nav>
 				<div className="auth-navigation">
 					<Link to="/auth/signin" className="button button-primary">Sign in</Link>
