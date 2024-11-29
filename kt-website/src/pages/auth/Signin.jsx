@@ -79,6 +79,7 @@ export function Signin() {
                     <label htmlFor="rememberme">Remember me</label>
                 </div>
                 <Link>Forgot password?</Link>
+                <Link to="/upload" className="button button-primary">View order history</Link>
             </div>
         </form>
     )
