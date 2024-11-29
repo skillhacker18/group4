@@ -1,0 +1,122 @@
+/* assets/css/profile.css */
+
+.profile-page {
+    background-color: #f4f4f9;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  h1 {
+    color: #0073e6;
+    text-align: center;
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+  
+  .user-details {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .user-details p {
+    margin: 10px 0;
+    font-size: 16px;
+  }
+  
+  .user-details strong {
+    color: #0073e6;
+  }
+  
+  .profile-section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-section h2 {
+    color: #0073e6;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Order History Section Styles */
+  .order-history ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-history li {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-history li p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .order-history li p strong {
+    color: #0073e6;
+  }
+  
+  /* Order Tracking Section Styles */
+  .order-tracking ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .order-tracking li {
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-tracking li p {
+    margin: 5px 0;
+    font-size: 16px;
+    color: #333;
+  }
+  
+  .order-tracking li p strong {
+    color: #0073e6;
+  }
+  
+  .order-tracking li:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+    transform: translateY(-5px);
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .order-tracking li:last-child {
+    margin-bottom: 0;
+  }
+  
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #0073e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #005bb5;
+  }
+  

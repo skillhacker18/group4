@@ -1,0 +1,12 @@
+{
+  "name": "kt-website-server",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node --env-file=.env source/index.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^11.6.0",
+    "express": "^4.21.1"
+  }
+}

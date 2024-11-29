@@ -1,0 +1,92 @@
+/* Define styles to be used for the entire site */
+
+:root {
+  --color: white;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui;
+  line-height: 1.5;
+  background-image: url("/src/assets/2.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: var(--color);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+  font-size: inherit;
+  line-height: inherit;
+  box-sizing: border-box;
+}
+
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+button {
+  line-height: inherit;
+  font-size: inherit;
+  border: none;
+}
+
+img {
+  min-width: 0;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+a {
+  color: inherit;
+}
+
+.button {
+  padding: 0.5rem 2rem;
+  background-color: rgb(255 255 255 / 0.5);
+  color: black;
+  font-weight: bold;
+  border-radius: 2rem;
+
+  &.button-primary {
+    background-color: rgb(255 255 255 / 0.8);
+  }
+
+  &:hover {
+    background-color: rgb(255 255 255 / 0.7);
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: rgb(255 255 255 / 0.6);
+  }
+}
+
+a.button {
+  text-decoration-line: none;
+}
+
+.input-field {
+  padding: 0;
+  background-color: inherit;
+  color: inherit;
+}
+
+.icon {
+  font-size: 1.2rem;
+}

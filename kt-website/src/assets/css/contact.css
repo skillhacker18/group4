@@ -1,0 +1,76 @@
+.contactpage{
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(180deg, rgba(255, 0, 0, 0.8), rgba(0, 0, 139, 0.8));;
+  }
+  
+  .contact-header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #fdfafa;
+  }
+  
+  .contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fdfafa;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px; /* Rounded corners */
+    background-color: #f0f0f0; /* Grey tint */
+    color: #000; /* Black text */
+  }
+  
+  .form-group textarea {
+    height: 100px;
+    resize: vertical;
+  }
+  
+  .char-count {
+    text-align: right;
+    color: #fdfafa;
+    font-size: 12px;
+  }
+  
+  .submit-button {
+    padding: 15px 30px; /* Bigger button */
+    background-color: #ff523b;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 25px; /* Rounded corners */
+    /*margin-top: 10px; /* Closer to the message input field */
+  }
+  
+  .submit-button:hover {
+    background-color: #e04a33;
+  }
+  
+  .contact-footer {
+    margin-top: 40px;
+    text-align: center;
+    color: #fff;
+  }
+  
+  .contact-footer p {
+    margin: 5px 0;
+  }
+  
