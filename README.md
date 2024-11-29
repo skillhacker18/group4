@@ -1,10 +1,11 @@
-Group 2: 1-3 Tuesday session
+Software Engineering - Vivid Printing group 4
 
-Memembers: 
+This the website for group 4 - Vivid Printing
+
+Members:
 Karnardia Simpson
-Kaydeen Tucker
-Tannice
-Ashley 
-Chung-F
 Nathaniel Saunders
-Trishana
+Kaydeen Tucker
+Ashley Chung-Fah
+Tannice Anglin
+Trishana Mckanes
